@@ -3,9 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "ramda": "^0.26.1",
+    "ramda-adjunct": "^2.18.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-helmet": "^5.2.1",
+    "react-scripts": "3.0.1",
+    "styled-components": "^4.3.0",
+    "styled-map": "^3.3.0",
+    "styled-normalize": "^8.0.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -29,7 +36,19 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react": "^8.0.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.16.0",
+    "husky": "^2.4.0",
+    "import-sort": "^6.0.0",
+    "import-sort-style-airkro": "^0.1.7",
+    "jest-dom": "^3.4.0",
+    "jest-enzyme": "^7.0.2",
+    "jest-in-case": "^1.0.2",
+    "jest-styled-components": "^6.3.1",
+    "lint-staged": "^8.2.0",
     "npm-quick-run": "^1.16.1",
     "standard": "^12.0.1"
   }
