@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Square matches the snapshot 1`] = `
+.c0 {
+  color: Crimson;
+  font-size: 16vh;
+  font-weight: bold;
+  line-height: 20vh;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+<span
+  class="c0"
+/>
+`;

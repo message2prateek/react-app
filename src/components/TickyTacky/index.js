@@ -1,5 +1,12 @@
-import * as React from 'react';
+import * as React from 'react'
 
-export default function TickyTacky() {
-  return <h1>Ticky Tacky</h1>;
+import Square from '../square'
+
+export default function TickyTacky () {
+  return (
+    <>
+      <h1>Ticky Tacky</h1>
+      <Square>x</Square>
+    </>
+  )
 }
