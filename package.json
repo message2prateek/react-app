@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "core-js": "3.0.1",
     "ramda": "^0.26.1",
     "ramda-adjunct": "^2.18.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-scripts": "3.0.1",
+    "regenerator-runtime": "^0.13.2",
     "styled-components": "^4.3.0",
     "styled-map": "^3.3.0",
     "styled-normalize": "^8.0.6"
@@ -18,10 +20,48 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "cov": "react-scripts test --coverage",
+    "format": "standard 'src/**/*.js' --fix"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "globals": [
+      "fetch",
+      "toJson"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "importSort": {
+    ".js": {
+      "parser": "babylon",
+      "style": "airkro"
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!<rootDir>/node_modules/",
+      "!src/index.js",
+      "!src/serviceWorker.js",
+      "src/**/*.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "standard --fix",
+      "git add"
+    ]
   },
   "browserslist": {
     "production": [
